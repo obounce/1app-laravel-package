@@ -13,15 +13,6 @@ On this page, we'll go over some  payment services we offer to give you a quick 
 If you're a business owner, here are a few ways we make it possible for you to collect payments from customers all over the world:
 Direct Bank Account Payments (Nigeria) - Customers can pay you directly from their bank accounts.
 </p>
-<b style='font-size:16px'>Tokenized Payments</b>
-<p>This is a feature that allows you to save a customer object on your platform so your users don't have to enter their card information repeatedly.
-</p>
-<b style='font-size:16px'>Transfers</b>
-<p>With 1app, you can make transfers to over 6+ African countries. This is a growing list that currently includes the US and Europe. We offer this feature via the dashboard and also via API for financial service providers, merchants, marketplaces etc.
-</p>
-<b style='font-size:16px'>Bill Payments with 1app:</b>
-<p>You can aggregate bill services such as airtime and data purchases and DSTV subscriptions. You get a commission for each sale and you can view your reports on a dashboard.
-</p>
 
  <hr>
 
