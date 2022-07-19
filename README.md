@@ -4,7 +4,9 @@
 </div>
 
 # 1APP Laravel Library
-
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Total Downloads][ico-downloads]][link-downloads]
 
 Learn how to integrate our APIs to build a web or mobile integration to accept payments, make payment of Bills and as well custom integration for your application and businesses.
 On this page, we'll go over some  payment services we offer to give you a quick overview of what is obtainable with 1app.
@@ -39,6 +41,7 @@ Direct Bank Account Payments (Nigeria) - Customers can pay you directly from the
  php artisan vendor:publish --provider="Oneapp\Oneapp\OneappServiceProvider"
 ```
 A configuration-file named oneapp.php with some sensible defaults will be placed in your config directory:
+
 ```sh
  <?php 
 
