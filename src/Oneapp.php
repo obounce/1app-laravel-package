@@ -13,14 +13,17 @@
 namespace Oneapp\Oneapp;
 
 use Oneapp\Oneapp\Controls\BillServices;
+use Oneapp\Oneapp\Controls\PaymentServices;
 
 class Oneapp
  {
     private $billServices;
+    private $paymentServices;
     
     public function __construct()
     {
         $this->billServices = new BillServices();
+        $this->paymentServices = new PaymentServices();
     }   
     /**
      *
@@ -117,5 +120,104 @@ class Oneapp
     public function getBankList()
     {
         return $this->billServices->getBankList();
+    }
+
+    /**
+     *
+     * initialize transaction
+     *
+     */
+    public function initTrans(array $trans)
+    {
+        return $this->paymentServices->initializeTransaction($trans);
+    }
+
+    /**
+     * Verify Transaction
+     */
+
+    public function verifyTrans(string $reference)
+    {
+        return $this->paymentServices->verifyTransaction($reference);
+    }
+
+    /**
+     * Get Transaction list
+     * 
+     */
+    public function transList()
+    {
+        return $this->paymentServices->transactionList();
+    }
+
+    /**
+     * Get Transaction
+     * @param string $reference
+     * 
+     */
+
+    public function getTrans(string $reference)
+    {
+        return $this->paymentServices->getTransaction($reference);
+    }
+
+    /**
+     * Get customer list
+     * 
+     */
+
+    public function getCusts()
+    {
+        return $this->paymentServices->getCustomer();
+    }
+
+    /**
+     * Get payout lists
+     */
+    public function payouts()
+    {
+        return $this->paymentServices->getPayouts();
+    }
+
+    /**
+     * Get payout transactions
+     * @param string $reference
+     */
+    public function getPayoutTrans(string $reference)
+    {
+        return $this->paymentServices->getPayoutTrans($reference);
+    }
+
+    /**
+     * Get disputes
+     */
+    public function disputes()
+    {
+        return $this->paymentServices->getDisputes();
+    }
+
+    /**
+     * accept dispute
+     */
+    public function acceptDispute()
+    {
+        return $this->paymentServices->acceptDispute();
+    }
+
+    /**
+     * decline dispute
+     *
+     */
+    public function rejectDispute()
+    {
+        return $this->paymentServices->declineDispute();
+    }
+    /**
+     * create wallet
+     * @param array $details
+     */
+    public function createWallet(array $details)
+    {
+        return $this->paymentServices->createWallet($details);
     }
  }

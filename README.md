@@ -4,7 +4,7 @@
 </div>
 
 # 1APP Laravel Library
-[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/oneapp/oneapp#1.0]
+[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/oneapp/oneapp]
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
@@ -36,7 +36,7 @@ Direct Bank Account Payments (Nigeria) - Customers can pay you directly from the
 
 
 ## Configuration
-
+You can publish the configuration file using this command:
 ```sh
  php artisan vendor:publish --provider="Oneapp\Oneapp\OneappServiceProvider"
 ```
@@ -67,6 +67,15 @@ A configuration-file named oneapp.php with some sensible defaults will be placed
  ];
 ```
 
+# Usage
+
+Open your .env file and add your public key, secret key, merchant email and payment url like so:
+```sh
+   ONEAPP_SECRET_KEY=
+   ONEAPP_PUBLIC_KEY=
+   ONEAPP_PAYMENT_URL=https://api.1app.online/v1
+```
+If you are using a hosting service like heroku, ensure to add the above details to your configuration variables.
 ## Credits
 
 -   [Samuel Damilola](https://github.com/odevlab)
