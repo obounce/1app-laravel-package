@@ -29,7 +29,7 @@ Direct Bank Account Payments (Nigeria) - Customers can pay you directly from the
 ## Installation
 
 ```sh
- $  composer require oneapp/oneapp
+ composer require oneapp/oneapp
 ```
 
 
