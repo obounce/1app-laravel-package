@@ -4,9 +4,6 @@
 </div>
 
 # 1APP Laravel Library
-[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/oneapp/oneapp]
-[![Software License][ico-license]](LICENSE.md)
-[![Total Downloads][ico-downloads]][link-downloads]
 
 Learn how to integrate our APIs to build a web or mobile integration to accept payments, make payment of Bills and as well custom integration for your application and businesses.
 On this page, we'll go over some  payment services we offer to give you a quick overview of what is obtainable with 1app.
