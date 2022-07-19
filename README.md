@@ -38,8 +38,31 @@ Direct Bank Account Payments (Nigeria) - Customers can pay you directly from the
 ```sh
  php artisan vendor:publish --provider="Oneapp\Oneapp\OneappServiceProvider"
 ```
+A configuration-file named oneapp.php with some sensible defaults will be placed in your config directory:
+```sh
+ <?php 
 
+ return [
 
+    /**
+    * The secret key from 1app Dashboard
+    */
+
+    'secretKey' => getenv('ONEAPP_SECRET_KEY'),
+
+    /**
+    * the public key from 1app Dashboard
+    */
+
+    'publicKey' => getenv('ONEAPP_PUBLIC_KEY'),
+
+    /**
+     * 1app Payment gateway url
+     */
+
+    'baseUrl' => getenv('ONEAPP_PAYMENT_URL'),
+ ];
+```
 
 ## Credits
 
