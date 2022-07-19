@@ -26,7 +26,11 @@ Direct Bank Account Payments (Nigeria) - Customers can pay you directly from the
 
  <hr>
 
-## Documentation
+## Installation
+
+```sh
+ $  composer require oneapp/oneapp
+```
 
 
 ## Credits
