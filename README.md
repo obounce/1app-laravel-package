@@ -33,6 +33,14 @@ Direct Bank Account Payments (Nigeria) - Customers can pay you directly from the
 ```
 
 
+## Configuration
+
+```sh
+ php artisan vendor:publish --provider="Oneapp\Oneapp\OneappServiceProvider"
+```
+
+
+
 ## Credits
 
 -   [Samuel Damilola](https://github.com/odevlab)
