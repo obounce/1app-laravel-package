@@ -4,7 +4,7 @@
 </div>
 
 # 1APP Laravel Library
-[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/oneapp/oneapp#1.0]
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
