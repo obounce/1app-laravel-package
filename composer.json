@@ -1,0 +1,47 @@
+{
+    "name": "oneapp/oneapp",
+    "description": "api package for 1 app",
+    "keywords": [
+        "1app",
+        "payments",
+        "bills",
+        "transfers",
+        "money",
+        "currency",
+        "transfer",
+        "reliable",
+        "cheaper",
+        "safer",
+        "no-down-time",
+        "payment-link"
+    ],
+    "type": "library",
+    "require": {
+        "php": "^7.2|^8.0|^8.1",
+        "illuminate/support": "~6|~7|~8|~9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Oneapp\\Oneapp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OdevLAB",
+            "email": "odevservices@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oneapp\\Oneapp\\OneappServiceProvider"
+            ],
+            "aliases": {
+                "Oneapp": "Oneapp\\Oneapp\\Facades\\Oneapp"
+            }
+        }
+    }
+}
+
