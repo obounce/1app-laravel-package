@@ -94,9 +94,9 @@ If you are using a hosting service like heroku, ensure to add the above details 
       'bankname'=> 'GT BANK',
       'reference'=> 'shudgyutg876542',
       'accountno'=> '0245000000',
-      'narration'=> 'Transer to client',
+      'narration'=> 'Transfer to client',
       'currency'=> 'NGN',
-      'acctname'=> 'Olajide Olajide'
+      'acctname'=> 'John Doe'
    ];
 
 ```
@@ -177,7 +177,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
    $vendDet = [
       'meterno' => '58000065357',
-      'metername' => 'IDRIS ADAMU',
+      'metername' => 'JOHN DOE',
       'provider' => 'KANO',
       'amount' => '100',
       'vendtype' => 'PREPAID',
@@ -222,7 +222,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
    $buyCable = [
       'tvno' => '7035601707',
       'tv' => 'DSTV',
-      'custname' => 'OREOLUWA JOKOTAGBA PAUL',
+      'custname' => 'JOHN DOE',
       'custno' => '171747582',
       'amount' => '50',
       'reference' => 'OI8UYTEFYDTYTG7'
