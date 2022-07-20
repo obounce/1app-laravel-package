@@ -1,6 +1,6 @@
 {
     "name": "oneapp/oneapp",
-    "description": "api package for 1 app",
+    "description": "Integrate our APIs to build a web or mobile integration to accept payments, make payment of Bills",
     "keywords": [
         "1app",
         "payments",

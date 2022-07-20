@@ -66,12 +66,10 @@ If you are using a hosting service like heroku, ensure to add the above details 
    $oneapp = new Oneapp();
 ```
 ### ```Check Account Balance```
-   Check Account Balance
 ```php
    $oneapp->checkBalance();
 ```
 ### ```Send Money```
-   Send money to friends and family with ease
  ```php
    //defined request types
    $moneypayload = [
