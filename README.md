@@ -75,7 +75,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
  ```php
    //defined request types
    $moneypayload = [
-      'amount' => '', //int
+      'amount' => '', //string
       'bankcode'=> '', //string
       'bankname'=> '', //string
       'reference'=> '', //string
@@ -112,7 +112,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
    //defined request types
    $dataB = [
       'datacode' => '', //string
-      'network_id' => '', //int
+      'network_id' => '', //string
       'phoneno' => '', //string
       'reference' => '' //string
    ];
@@ -120,7 +120,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
    $oneapp->dataBundle(array $dataB);
 
    //sample request
-   // Network ID - MTN = 2,  GLO = 1, AIRTEL = 3, 9MOBILE = 4
+   // Network ID - GLO = 1, MTN = 2, AIRTEL = 3, 9MOBILE = 4
    $dataB = [
       'datacode' => '1000',
       'network_id' => '2',
@@ -132,14 +132,14 @@ If you are using a hosting service like heroku, ensure to add the above details 
 ```php
    $phoneDet = [
       'phoneno' => '', //string
-      'network_id' => '', //int
+      'network_id' => '', //string
       'reference' => '', //string
-      'amount' => '' //int
+      'amount' => '' //string
    ];
    $oneapp->airtime($phoneDet);
 
    //Sample Request
-   // Network ID - MTN = 2,  GLO = 1, AIRTEL = 3, 9MOBILE = 4
+   // Network ID - GLO = 1, MTN = 2, AIRTEL = 3, 9MOBILE = 4
    $phoneDet = [
       'phoneno' => '07012345678',
       'network_id' => '2',
@@ -158,7 +158,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
    //Sample Request
    $electDet = [
-      'meterno' => '58000065357',
+      'meterno' => '78632746282',
       'provider' => 'KANO',
    ];
 ```
@@ -169,14 +169,14 @@ If you are using a hosting service like heroku, ensure to add the above details 
       'meterno' => '', //string
       'metername' => '', //string
       'provider' => '', //string
-      'amount' => '', //int
+      'amount' => '', //string
       'vendtype' => '', //string
       'reference' => '' //string
    ];
    $oneapp->vendElect($vendDet);
 
    $vendDet = [
-      'meterno' => '58000065357',
+      'meterno' => '67537283728',
       'metername' => 'JOHN DOE',
       'provider' => 'KANO',
       'amount' => '100',
@@ -200,7 +200,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
       $oneapp->verifyCable($type, $iuc);
 
       //Sample Request
-      $iuc = '7035601707',
+      $iuc = '87675656325',
       $type = 'DSTV'
 ```
 
@@ -212,15 +212,15 @@ If you are using a hosting service like heroku, ensure to add the above details 
          'tv' => '', //string
          'custname' => '', //string
          'custno' => '', //string
-         'amount' => '', //int
-         'reference' => '' //int
+         'amount' => '', //string
+         'reference' => '' //string
      ];
      $oneapp->buyCableTV($buyCable);
      
      
      //sample request
    $buyCable = [
-      'tvno' => '7035601707',
+      'tvno' => '87675656325',
       'tv' => 'DSTV',
       'custname' => 'JOHN DOE',
       'custno' => '171747582',
@@ -241,27 +241,27 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
 ```php
    $transaction = [
-      'amount' => '' // string,
-      'fname' => '' // string,
-      'lname' => '' // string,
-      'customer_email' => '' // string,
-      'phone' => '' // string,
-      'reference' => '' // string,
-      'currency' => '' // string,
-      'redirecturl' => '' // string
+      'amount' => '', // string,
+      'fname' => '', // string,
+      'lname' => '', // string,
+      'customer_email' => '', // string,
+      'phone' => '', // string,
+      'reference' => '', // string,
+      'currency' => '', // string,
+      'redirecturl' => '', // string
    ];
    $oneapp->initTrans($transaction);
 
    //sample request
    $transaction = [
-    "amount": '1000',
-    "fname": 'John',
-    "lname": 'Doe',
-    "customer_email": 'johndoe@gmail.com',
-    "phone": '0801234567789',
-    "reference": 'OI8UYTEFYDTYTG7',
-    "currency": 'NGN', //NGN or USD supported for now
-    "redirecturl": 'https://mywebsite.com'
+      "amount"=> '1000',
+      "fname"=> 'John',
+      "lname"=> 'Doe',
+      "customer_email"=> 'johndoe@gmail.com',
+      "phone"=> '0801234567789',
+      "reference"=> 'OI8UYTEFYDTYTG7',
+      "currency"=> 'NGN', //NGN or USD supported for now
+      "redirecturl"=> 'https://mywebsite.com'
    ];
 ```
 
@@ -304,7 +304,8 @@ If you are using a hosting service like heroku, ensure to add the above details 
 ### ```Get Payouts / Settlements Transactions```
 ```php
    $reference = ''; //string
-   $oneapp->getPayoutTrans($reference)
+   $oneapp->getPayoutTrans($reference);
+
    //sample request
    'reference'=> 'OI8UYTEFYDTYTG7';
 ```
@@ -315,11 +316,11 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
 ### ```Accept Disputes ```
 ```php
-   $oneapp->acceptDispute()
+   $oneapp->acceptDispute();
 ```
 ### ```Decline Disputes ```
 ```php
-   $oneapp->rejectDispute()
+   $oneapp->rejectDispute();
 ```
 # Wallet
 <hr>
