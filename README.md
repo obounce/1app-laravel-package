@@ -137,7 +137,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
       'reference' => '', //string
       'amount' => '' //int
    ];
-   return $this->oneapp->airtime($phoneDet);
+   $oneapp->airtime($phoneDet);
 
    //Sample Request
    // Network ID - MTN = 2,  GLO = 1, AIRTEL = 3, 9MOBILE = 4
@@ -155,7 +155,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
       'meterno' => '', //string
       'provider' => '', //string
     ];
-   return $this->oneapp->verifyElectricity($electDet);
+   $oneapp->verifyElectricity($electDet);
 
    //Sample Request
    $electDet = [
@@ -174,7 +174,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
       'vendtype' => '', //string
       'reference' => '' //string
    ];
-   return $this->oneapp->vendElect($vendDet);
+   $oneapp->vendElect($vendDet);
 
    $vendDet = [
       'meterno' => '58000065357',
@@ -238,10 +238,102 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
 # Payments
 
-### ```Payments```
+### ```Initialize Payments```
 
 ```php
-   ...coming soon
+   $transaction = [
+      'amount' => '' // string,
+      'fname' => '' // string,
+      'lname' => '' // string,
+      'customer_email' => '' // string,
+      'phone' => '' // string,
+      'reference' => '' // string,
+      'currency' => '' // string,
+      'redirecturl' => '' // string
+   ];
+   $oneapp->initTrans($transaction);
+
+   //sample request
+   $transaction = [
+    "amount": '1000',
+    "fname": 'John',
+    "lname": 'Doe',
+    "customer_email": 'johndoe@gmail.com',
+    "phone": '0801234567789',
+    "reference": 'OI8UYTEFYDTYTG7',
+    "currency": 'NGN', //NGN or USD supported for now
+    "redirecturl": 'https://mywebsite.com'
+   ];
+```
+
+### ```Verify transaction```
+```php
+   $reference = ''; //string
+   $oneapp->verifyTrans($reference);
+
+   //sample request
+   'reference'=> 'OI8UYTEFYDTYTG7';
+```
+
+### ```Transaction Lists```
+
+```php
+//Get Transaction List
+   $oneapp->transList();
+```
+
+### ```Get Transaction Details```
+
+```php
+   $reference = ''; //string
+   $oneapp->getTrans($reference);
+
+   //sample request
+   'reference'=> 'OI8UYTEFYDTYTG7';
+```
+
+### ```Get Customers ```
+```php
+   $oneapp->getCusts();
+```
+
+### ```Get Payouts / Settlements ```
+```php
+   $oneapp->payouts();
+```
+
+### ```Get Payouts / Settlements Transactions```
+```php
+   $reference = ''; //string
+   $oneapp->getPayoutTrans($reference)
+   //sample request
+   'reference'=> 'OI8UYTEFYDTYTG7';
+```
+### ```Disputes```
+```php
+   $oneapp->disputes();
+```
+
+### ```Accept Disputes ```
+```php
+   $oneapp->acceptDispute()
+```
+### ```Decline Disputes ```
+```php
+   $oneapp->rejectDispute()
+```
+# Wallet
+<hr>
+
+### ```Create Wallet```
+```php
+   $details = [
+
+   ];
+
+   $oneapp->createWallet($details);
+   
+   //Sample Requests
 ```
 
 ## Credits
