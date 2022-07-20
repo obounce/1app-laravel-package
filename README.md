@@ -1,7 +1,6 @@
-<br>
-<div style="margin:0 auto!important;text-align: center">
-<img style="width:200px; height: 100px" src="https://new.1app.online/img/1appnewlogo.8e95dfd0.png">
-</div>
+<p style="text-align: center">
+   <a href="https://1app.online"><img style="width:200px;" src="https://new.1app.online/img/1appnewlogo.8e95dfd0.png"></a>
+</p>
 
 # 1APP Laravel Library
 
@@ -338,9 +337,9 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
 ## Credits
 
--   [Samuel Damilola](https://github.com/odevlab)
--   [Jokotagba Oreoluwa](https://github.com/kingjokes)
--   [Adeniyi Elijah](https://github.com/elieonline)
+-   [Samuel Owadayo](https://github.com/odevlab)
+-   [Paul Jokotagba](https://github.com/kingjokes)
+-   [Elijah Adeniyi](https://github.com/elieonline)
 -   [Samuel Adekunle](https://github.com/techwithsam)
 -   [Olajide Olatunji](https://github.com/devOjidex)
 
