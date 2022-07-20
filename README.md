@@ -339,7 +339,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
 ## Credits
 
 -   [Samuel Damilola](https://github.com/odevlab)
--   [Jokotagba Oreoluwa](https://github.com/kvngjokes)
+-   [Jokotagba Oreoluwa](https://github.com/kingjokes)
 -   [Adeniyi Elijah](https://github.com/elieonline)
 -   [Samuel Adekunle](https://github.com/techwithsam)
 -   [Olajide Olatunji](https://github.com/ojidex)
