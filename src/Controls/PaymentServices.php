@@ -58,7 +58,7 @@ class PaymentServices
     {
         try{
             $headers = [
-                'Authorization' => $this->setPublic(),
+                'Authorization' => $this->setSecret(),
             ];
             $response = Http::withHeaders($headers)->asForm()->post($this->baseUrl() . '/business/initiatetrans', $trans);  //request to initialize transaction
             return $response;
