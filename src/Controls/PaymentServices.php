@@ -54,13 +54,13 @@ class PaymentServices
         $this->setSecret();
     }
 
-    public function initializeTransaction($transaction)
+    public function initializeTransaction($trans)
     {
         try{
             $headers = [
                 'Authorization' => $this->setPublic(),
             ];
-            $response = Http::withHeaders($headers)->asForm()->post($this->baseUrl() . '/business/initiatetrans', $transaction);  //request to initialize transaction
+            $response = Http::withHeaders($headers)->asForm()->post($this->baseUrl() . '/business/initiatetrans', $trans);  //request to initialize transaction
             return $response;
         }catch(Exception $exception){
             return [

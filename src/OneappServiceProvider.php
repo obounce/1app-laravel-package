@@ -46,8 +46,6 @@ class OneappServiceProvider extends ServiceProvider
             return new Oneapp;
 
         });
-
-        // $this->app->alias('oneapp', "OdevLAB\Laravel1app\Oneapp");
     }
     
     /**

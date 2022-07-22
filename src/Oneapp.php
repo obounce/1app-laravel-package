@@ -38,6 +38,7 @@ class Oneapp
     /**
      *
      * Send Money
+     * @param array $moneypayload
      *
      */
     public function sendMoney(array $moneypayload)
@@ -45,6 +46,12 @@ class Oneapp
         return $this->billServices->sendMoney($moneypayload);
     }
 
+    /**
+     *
+     * Get Data Plan
+     * @param string $ntwk
+     *
+     */
     public function dataPlans($ntwk)
     {
         return $this->billServices->dataPlans($ntwk);
@@ -52,6 +59,7 @@ class Oneapp
     /**
      *
      * databundle
+     * @param array $dataB
      *
      */
     public function dataBundle(array $dataB)
@@ -61,6 +69,7 @@ class Oneapp
     /**
      *
      * airtime
+     * @param array $phoneDet
      *
      */
     public function airtime(array $phoneDet)
@@ -70,6 +79,7 @@ class Oneapp
     /**
      *
      * verify electricity
+     * @param array $electDet
      *
      */
     public function verifyElectricity(array $electDet)
@@ -79,6 +89,7 @@ class Oneapp
     /**
      *
      * vend electricity
+     * @param array $vendDet
      *
      */
     public function vendElect(array $vendDet)
@@ -88,6 +99,7 @@ class Oneapp
     /**
      *
      * get cabletv
+     * @param string $tv
      *
      */
     public function getCableTV(string $tv)
@@ -97,6 +109,7 @@ class Oneapp
     /**
      *
      * verify cabletv
+     * @param string $type, int $iuc
      *
      */
     public function verifyCable(string $type, int $iuc)
@@ -106,6 +119,7 @@ class Oneapp
     /**
      *
      * buy cable sub
+     * @param array $buyCable
      *
      */
     public function buyCableTV(array $buyCable)
@@ -125,6 +139,7 @@ class Oneapp
     /**
      *
      * initialize transaction
+     * @param array $trans
      *
      */
     public function initTrans(array $trans)
@@ -134,6 +149,7 @@ class Oneapp
 
     /**
      * Verify Transaction
+     * @param string $reference
      */
 
     public function verifyTrans(string $reference)
@@ -153,7 +169,6 @@ class Oneapp
     /**
      * Get Transaction
      * @param string $reference
-     * 
      */
 
     public function getTrans(string $reference)
@@ -198,19 +213,21 @@ class Oneapp
 
     /**
      * accept dispute
+     * @param array $accept
+     *
      */
-    public function acceptDispute()
+    public function acceptDispute(array $accept)
     {
-        return $this->paymentServices->acceptDispute();
+        return $this->paymentServices->acceptDispute($accept);
     }
 
     /**
      * decline dispute
-     *
+     * @param array $decline
      */
-    public function rejectDispute()
+    public function rejectDispute(array $decline)
     {
-        return $this->paymentServices->declineDispute();
+        return $this->paymentServices->declineDispute($decline);
     }
     /**
      * create wallet
@@ -220,4 +237,5 @@ class Oneapp
     {
         return $this->paymentServices->createWallet($details);
     }
+
  }

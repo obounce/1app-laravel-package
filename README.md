@@ -314,11 +314,68 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
 ### ```Accept Disputes ```
 ```php
-   $oneapp->acceptDispute();
+         $accept = [
+            'sesscode' => '',  //string,
+            'userid' => '', // int,
+            'businessid' => '',  //int,
+            'disputeid' => '', // int,
+            'transref' => '', // string,
+            'customername' => '', // string,
+            'customeremail' => '',//  string,
+            'customerphone' => '', // string,
+            'dclaim' => '', // string,
+            'torefund' => '', // int,
+        ];
+        
+   $oneapp->acceptDispute($accept);
+
+   //sample request
+         $accept = [
+            'sesscode' =>  '123456',
+            'userid' =>  1,
+            'businessid' =>  2,
+            'disputeid' =>  1,
+            'transref' =>  'OI8UYTEFYDTYTG7',
+            'customername' =>  'John Doe',
+            'customeremail' =>  'johndoe@gmail.com',
+            'customerphone' =>  '09034568931',
+            'dclaim' =>  'shoe purchase', //service offered
+            'torefund' =>  10000, //amount to refund
+        ];
 ```
 ### ```Decline Disputes ```
 ```php
-   $oneapp->rejectDispute();
+
+      $decline = [
+            'sesscode' => '', //string
+            'userid' => '', //string
+            'businessid' => , //int
+            'disputeid' => , //int
+            'txref' => '', //string
+            'name' => '', //string
+            'email' => '', //string
+            'phone' => '', //string
+            'claim' => '', //string //service offered
+            'descres' => '', //string //decline reason
+            'receipt' => '', //string  //evidence of decline, File Upload
+        ];
+   $oneapp->rejectDispute($decline);
+
+   //sample request
+      $decline = [
+            'sesscode' => '12345',
+            'userid' => '1234',
+            'businessid' => 3,
+            'disputeid' => 3,
+            'txref' => 'OI8UYTEFYDTYTG7',
+            'name' => 'John Doe',
+            'email' => 'johndoe@gmail.come',
+            'phone' => '080XXXXXX98',
+            'claim' => 'shoe purchase', //service offered
+            'descres' => 'no error in transaction', //decline reason
+            'receipt' => 'receipt.jpeg', //evidence of decline, File Upload
+        ];
+
 ```
 # Wallet
 <hr>
