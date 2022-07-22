@@ -10,7 +10,7 @@ On this page, we'll go over some  payment services we offer to give you a quick 
 
  <hr>
  
- [![Latest Stable Version](http://poser.pugx.org/phpunit/phpunit/v)](https://packagist.org/packages/oneapp/oneapp) [![Total Downloads](http://poser.pugx.org/phpunit/phpunit/downloads)](https://packagist.org/packages/oneapp/oneapp) [![Latest Unstable Version](http://poser.pugx.org/phpunit/phpunit/v/unstable)](https://packagist.org/packages/oneapp/oneapp) [![License](http://poser.pugx.org/phpunit/phpunit/license)](https://packagist.org/packages/phpunit/phpunit) [![PHP Version Require](http://poser.pugx.org/phpunit/phpunit/require/php)](https://packagist.org/packages/oneapp/oneapp)
+ [![Latest Stable Version](http://poser.pugx.org/oneapp/oneapp/v)](https://packagist.org/packages/oneapp/oneapp) [![Total Downloads](http://poser.pugx.org/oneapp/oneapp/downloads)](https://packagist.org/packages/oneapp/oneapp) [![Latest Unstable Version](http://poser.pugx.org/oneapp/oneapp/v/unstable)](https://packagist.org/packages/oneapp/oneapp) [![License](http://poser.pugx.org/oneapp/oneapp/license)](https://packagist.org/packages/oneapp/oneapp/) [![PHP Version Require](http://poser.pugx.org/oneapp/oneapp/require/php)](https://packagist.org/packages/oneapp/oneapp)
 
 ## Installation
 
