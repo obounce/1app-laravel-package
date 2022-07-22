@@ -4,12 +4,14 @@
 
 # 1APP Laravel Library
 
+ 
+ [![Latest Stable Version](http://poser.pugx.org/oneapp/oneapp/v)](https://packagist.org/packages/oneapp/oneapp) [![Total Downloads](http://poser.pugx.org/oneapp/oneapp/downloads)](https://packagist.org/packages/oneapp/oneapp) [![Latest Unstable Version](http://poser.pugx.org/oneapp/oneapp/v/unstable)](https://packagist.org/packages/oneapp/oneapp) [![License](http://poser.pugx.org/oneapp/oneapp/license)](https://packagist.org/packages/oneapp/oneapp/) [![PHP Version Require](http://poser.pugx.org/oneapp/oneapp/require/php)](https://packagist.org/packages/oneapp/oneapp)
+
 Learn how to integrate our APIs to build a web or mobile integration to accept payments, make payment of Bills and as well custom integration for your application and businesses.
 On this page, we'll go over some  payment services we offer to give you a quick overview of what is obtainable with 1app.
 <br><br>
 
  <hr>
-
 ## Installation
 
 ```php
