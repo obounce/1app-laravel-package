@@ -240,7 +240,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
 ### ```Initialize Payments```
 
 ```php
-   $transaction = [
+   $trans = [
       'amount' => '', // string,
       'fname' => '', // string,
       'lname' => '', // string,
@@ -250,10 +250,10 @@ If you are using a hosting service like heroku, ensure to add the above details 
       'currency' => '', // string,
       'redirecturl' => '', // string
    ];
-   $oneapp->initTrans($transaction);
+   $oneapp->initTrans($trans);
 
    //sample request
-   $transaction = [
+   $trans = [
       "amount"=> '1000',
       "fname"=> 'John',
       "lname"=> 'Doe',
@@ -271,7 +271,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
    $oneapp->verifyTrans($reference);
 
    //sample request
-   'reference'=> 'OI8UYTEFYDTYTG7';
+   'reference' = 'OI8UYTEFYDTYTG7';
 ```
 
 ### ```Transaction Lists```
@@ -384,16 +384,31 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
 ### ```Create Wallet```
 ```php
-   $details = [
-
-   ];
+      $details = [
+            'apptoken' => '', //string
+            'fname' => '', //string
+            'sname' => '', //string
+            'email' => '', //string
+            'phoneno' => '', //string
+            'auth' => '', //string
+            'referby' => ''
+        ];
 
    $oneapp->createWallet($details);
    
-   //Sample Requests
+   //Sample Request
+   $details = [
+            'apptoken' => 'APPID',
+            'fname' => 'testname',
+            'sname' => 'testsurname',
+            'email' => 'email@example.com',
+            'phoneno' => '08000000000',
+            'auth' => 'D@tqj8265',
+            'referby' => ''
+        ];
 ```
 
-# Documentation Web [Full Documentation](https://docs.1app.online)
+# 1app Web [Documentation](https://docs.1app.online)
 
 ## Credits
 
