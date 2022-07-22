@@ -393,6 +393,8 @@ If you are using a hosting service like heroku, ensure to add the above details 
    //Sample Requests
 ```
 
+# Documentation Web [Full Documentation](https://docs.1app.online)
+
 ## Credits
 
 -   [Samuel Owadayo](https://github.com/odevlab)
