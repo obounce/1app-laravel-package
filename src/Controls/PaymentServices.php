@@ -64,7 +64,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -81,7 +81,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -98,7 +98,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -115,7 +115,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -132,7 +132,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -149,7 +149,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -166,7 +166,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -183,7 +183,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -200,7 +200,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -217,7 +217,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -234,7 +234,7 @@ class PaymentServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];

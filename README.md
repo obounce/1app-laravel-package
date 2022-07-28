@@ -233,6 +233,19 @@ If you are using a hosting service like heroku, ensure to add the above details 
 ```php
    $oneapp->getBankList();
 ```
+
+### ```Verify Account Number ```
+```php
+   //
+   $acctno => ''; //string
+   $bankcode => ''; //string
+
+   $oneapp->verNumber($acctno, $bankcode);
+
+   //sample request
+   $acctno => '856231552652';
+   $bankcode => '021542';
+```
 <hr>
 
 # Payments
@@ -271,7 +284,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
    $oneapp->verifyTrans($reference);
 
    //sample request
-   'reference' = 'OI8UYTEFYDTYTG7';
+   $reference = 'OI8UYTEFYDTYTG7';
 ```
 
 ### ```Transaction Lists```
@@ -288,7 +301,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
    $oneapp->getTrans($reference);
 
    //sample request
-   'reference'=> 'OI8UYTEFYDTYTG7';
+   $reference = 'OI8UYTEFYDTYTG7';
 ```
 
 ### ```Get Customers ```
@@ -307,7 +320,7 @@ If you are using a hosting service like heroku, ensure to add the above details 
    $oneapp->getPayoutTrans($reference);
 
    //sample request
-   'reference'=> 'OI8UYTEFYDTYTG7';
+   $reference = 'OI8UYTEFYDTYTG7';
 ```
 ### ```Disputes```
 ```php
@@ -410,6 +423,8 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
 # 1app Web [Documentation](https://docs.1app.online)
 
+<!-- # Contributors -->
+<!-- [![](https://github.com/kingjokes.png?size=50)](https://github.com/kinjokes) -->
 ## Credits
 
 -   [Samuel Owadayo](https://github.com/odevlab)

@@ -69,7 +69,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -94,7 +94,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -116,7 +116,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -138,7 +138,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -160,7 +160,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -185,7 +185,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -207,7 +207,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -230,7 +230,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -252,7 +252,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -274,7 +274,7 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];
@@ -296,7 +296,29 @@ class BillServices
             return $response;
         }catch(Exception $exception){
             return [
-                'status' => $exception->getCode(),
+                'status' => false,
+                'message' => 'Something went wrong',
+                'error' => $exception->getMessage(),
+            ];
+        }
+    }
+
+     /**
+     *
+     * Verify Account Number
+     *
+     */
+    public function verifyAccount($acctno, $bankcode)
+    {
+        try{
+            $headers = [
+                'Authorization' => $this->setPublic(),
+            ];
+            $response = Http::withHeaders($headers)->get($this->baseUrl() . '/validate-acctname?acctno='.$acctno.'&bankcode='.$bankcode);
+            return $response;
+        }catch(Exception $exception){
+            return [
+                'status' => false,
                 'message' => 'Something went wrong',
                 'error' => $exception->getMessage(),
             ];

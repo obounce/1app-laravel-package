@@ -138,6 +138,17 @@ class Oneapp
 
     /**
      *
+     * get bank lists
+     *
+     */
+    public function verNumber($acctno, $bankcode)
+    {
+        return $this->billServices->verifyAccount($acctno, $bankcode);
+    }
+
+
+    /**
+     *
      * initialize transaction
      * @param array $trans
      *
