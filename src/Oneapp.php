@@ -160,10 +160,10 @@ class Oneapp
 
     /**
      * Verify Transaction
-     * @param string $reference
+     * @param array $reference
      */
 
-    public function verifyTrans(string $reference)
+    public function verifyTrans(array $reference)
     {
         return $this->paymentServices->verifyTransaction($reference);
     }

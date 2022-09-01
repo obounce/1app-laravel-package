@@ -60,7 +60,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->asForm()->post($this->baseUrl() . '/business/initiatetrans', $trans);  //request to initialize transaction
+            $response = Http::withHeaders($headers)->post($this->baseUrl() . '/business/initiatetrans', $trans);  //request to initialize transaction
             return $response;
         }catch(Exception $exception){
             return [
@@ -71,13 +71,13 @@ class PaymentServices
         }
     }
 
-    public function verifyTransaction($reference)
+    public function verifyTransaction($data)
     {
         try{
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->asForm()->post($this->baseUrl() . '/business/verifytrans/', $reference);  //request to verify transaction
+            $response = Http::withHeaders($headers)->post($this->baseUrl() . '/business/verifytrans', $data);  //request to verify transaction
             return $response;
         }catch(Exception $exception){
             return [
@@ -94,7 +94,8 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->get($this->baseUrl . '/business/transaction');  //request to get transaction list
+              //request to get transaction list
+            $response = Http::withHeaders($headers)->get($this->baseUrl().'/business/transactions');
             return $response;
         }catch(Exception $exception){
             return [
@@ -111,7 +112,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->get($this->baseUrl . '/business/fetchtrans?reference='. $reference);  //request to get transaction data
+            $response = Http::withHeaders($headers)->get($this->baseUrl(). '/business/fetchtrans?reference='. $reference);  //request to get transaction data
             return $response;
         }catch(Exception $exception){
             return [
@@ -128,7 +129,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->get($this->baseUrl . 'business/customers');  //request to get customer data
+            $response = Http::withHeaders($headers)->get($this->baseUrl(). '/business/customers');  //request to get customer data
             return $response;
         }catch(Exception $exception){
             return [
@@ -145,7 +146,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->get($this->baseUrl . 'business/payouts');  //request to get payouts data
+            $response = Http::withHeaders($headers)->get($this->baseUrl(). '/business/payouts');  //request to get payouts data
             return $response;
         }catch(Exception $exception){
             return [
@@ -162,7 +163,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->get($this->baseUrl . 'business/fetchpayout?reference='. $reference);  //request to get payouts data
+            $response = Http::withHeaders($headers)->get($this->baseUrl(). '/business/payout-transactions?payoutref='. $reference);  //request to get payouts data
             return $response;
         }catch(Exception $exception){
             return [
@@ -179,7 +180,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->get($this->baseUrl . 'business/disputes');  //request to get disputes data
+            $response = Http::withHeaders($headers)->get($this->baseUrl(). '/business/disputes');  //request to get disputes data
             return $response;
         }catch(Exception $exception){
             return [
@@ -196,7 +197,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->asForm()->post($this->baseUrl . '/business/accept-dispute');  //request to get accept disputes
+            $response = Http::withHeaders($headers)->post($this->baseUrl(). '/business/accept-dispute');  //request to get accept disputes
             return $response;
         }catch(Exception $exception){
             return [
@@ -213,7 +214,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->asForm()->post($this->baseUrl . '/business/decline-dispute');  //request to get decline disputes
+            $response = Http::withHeaders($headers)->post($this->baseUrl(). '/business/decline-dispute');  //request to get decline disputes
             return $response;
         }catch(Exception $exception){
             return [
@@ -230,7 +231,7 @@ class PaymentServices
             $headers = [
                 'Authorization' => $this->setSecret(),
             ];
-            $response = Http::withHeaders($headers)->asForm()->post($this->baseUrl . '/business/createwallet', $details);  //request to get create wallet
+            $response = Http::withHeaders($headers)->post($this->baseUrl(). '/business/createwallet', $details);  //request to get create wallet
             return $response;
         }catch(Exception $exception){
             return [

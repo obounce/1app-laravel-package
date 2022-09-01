@@ -280,11 +280,15 @@ If you are using a hosting service like heroku, ensure to add the above details 
 
 ### ```Verify transaction```
 ```php
-   $reference = ''; //string
-   $oneapp->verifyTrans($reference);
+   $data = [
+      'reference' => '' //string
+      ]; 
+   $oneapp->verifyTrans($data);
 
    //sample request
-   $reference = 'OI8UYTEFYDTYTG7';
+  $data = [
+      'reference' => '456TFGYH76545TD'
+      ]; 
 ```
 
 ### ```Transaction Lists```
